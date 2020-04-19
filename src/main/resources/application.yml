@@ -1,0 +1,23 @@
+server:
+  port: 8002
+
+spring:
+  application:
+    name: restaurant-kitchen
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/trainingorder?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    password:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: amit
+    password: amit
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
